@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//이 게임오브젝트에 Animator가 없으면 안된다고 하는 명시하는 역활
-//이게임오브젝트에 Animator 컴퍼넌트없으면 게임이 실행되지 않음 
+
 [RequireComponent (typeof(Animator))]
+
 public class PlayerMovement : MonoBehaviour
 {
 
@@ -14,11 +14,14 @@ public class PlayerMovement : MonoBehaviour
     float lastAttackTime, lastSkillTime, lastDashTime;
     public bool attacking = false;
     public bool dashing = false;
+    public float ba;
+
     void Start ()
     {
         ani = GetComponent<Animator>();
         rbody = GetComponent<Rigidbody>();
         attacking = false;
+        ba = 0f;
     }
 	public void OnStickChanged(Vector2 stickPos)
     {
@@ -30,8 +33,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(ani)
         {
-            float back = 1f;
-            if (v < 0f) back = -1f;
+            ba = 1f;
+            if (v < 0f) ba = -1f;
             ani.SetFloat("Speed", (h * h + v * v));
            if(rbody)
             {

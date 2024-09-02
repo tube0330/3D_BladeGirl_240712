@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         {
             ba = 1f;
             if (v < 0f) ba = -1f;
-            ani.SetFloat("Speed", (h * h + v * v));
+            ani.SetFloat("Speed", h * h + v * v);
            if(rbody)
             {
                 Vector3 speed = rbody.velocity;

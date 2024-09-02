@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-/* ÀÌ °ÔÀÓ ¿ÀºêÁ§Æ®¿¡¼­ Animator ÄÄÆ÷³ÍÆ®°¡ ¾øÀ¸¸é ¾ÈµÊ
- * °³¹ßÀÚ°¡ ½Ç¼ö·Î Animator ÄÄÆ÷³ÍÆ®¸¦ »èÁ¦ÇÏ¸é °æ°í¸¦ ¶ç¿ò
+/* ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ï¿½ï¿½ Animator ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Èµï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ ï¿½Ç¼ï¿½ï¿½ï¿½ Animator ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
  */
 
 public class Player : MonoBehaviour
@@ -109,11 +109,11 @@ public class Player : MonoBehaviour
                 Vector3 speed = rb.velocity;
 
                 speed.x = 4 * h;
-                speed.z = 4 * v;    //3D Ä³¸¯ÅÍ´Â zÃàÀ¸·Î ¾ÕµÚ·Î ¿òÁ÷ÀÌ´Ï±î
+                speed.z = 4 * v;
 
                 rb.velocity = speed;
 
-                if (h != 0 && v != 0)    //¿òÁ÷ÀÌ°í ÀÖ´Ù¸é
+                if (h != 0 && v != 0)
                     transform.rotation = Quaternion.LookRotation(new Vector3(h, 0f, v));
             }
         }

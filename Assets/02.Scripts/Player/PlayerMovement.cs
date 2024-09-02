@@ -30,8 +30,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(ani)
         {
-            float _back = 1f;
-            if (v < 0f) _back = -1f;
+            float back = 1f;
+            if (v < 0f) back = -1f;
             ani.SetFloat("Speed", (h * h + v * v));
            if(rbody)
             {

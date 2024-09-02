@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-public class EmeyMove : MonoBehaviour
+public class EnemyMove : MonoBehaviour
 {
     Transform player;
     NavMeshAgent nav;

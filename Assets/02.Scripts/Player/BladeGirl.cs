@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
-/* �� ���� ������Ʈ���� Animator ������Ʈ�� ������ �ȵ�
- * �����ڰ� �Ǽ��� Animator ������Ʈ�� �����ϸ� ����� ���
- */
 
 public class Player : MonoBehaviour
 {
@@ -102,7 +99,7 @@ public class Player : MonoBehaviour
     {
         if (ani != null)
         {
-            ani.SetFloat("speed", (h * h + v * v));
+            ani.SetFloat("speed", h * h + v * v);
 
             if (rb != null)
             {
